@@ -152,7 +152,7 @@ When you change the data, update `DATA_META.build` in `src/data/systems.js`. Upd
 | `src/data/passives.js`, `src/data/forge.js`, `src/data/biomes.js` | Passive tree rows, slot upgrade costs and biome unlocks. |
 | `src/core/calc.js`, `src/core/planner.js` | Game formulas, damage models, point allocation, bonus ranks and caps, gear and gem plans, validation and build code import and export. |
 | `src/ui/*.js` | Planner, Passive Tree, Calculators, Codex, Tips and Sources. |
-| [Research notes](docs/RESEARCH.md) | Sources, game mechanics, limitations and updates. |
+| [Research notes](docs/RESEARCH.en.md) | Sources, game mechanics, limitations and updates. |
 | `tests/smoke.mjs`, `tests/http.mjs` | Logic, data and rendering tests, plus HTTP tests for module imports, content types and versioned paths. |
 
 ## Data sources
@@ -175,7 +175,7 @@ The smoke test compares the branch, tier and maximum rank for all 90 skills with
 
 The damage calculator estimates the expected multiplier per hit. It models excess critical strike chance, full 100% increments of Double Hit and Double Damage, and Damage Reduction caps. The game does not publish the full order of its damage calculations. Use the estimate to compare builds. Exact damage per second requires more information.
 
-To update a snapshot, edit the relevant files in `src/data/*.js` and the review date. Update the build ID and run both test suites. See the data update procedure in section 6 of the [research notes](docs/RESEARCH.md).
+To update a snapshot, edit the relevant files in `src/data/*.js` and the review date. Update the build ID and run both test suites. Follow the [data update procedure](docs/RESEARCH.en.md#6-how-to-update-the-data).
 
 ## The two sides of the hub
 
@@ -206,7 +206,7 @@ Read the class recommendations, top eight stat priorities and next eight investm
 
 ### Game artwork
 
-Guide Helper includes all 202 item icons and their `index.json` mapping in `assets/items/`. The download command is `node scripts/fetch-art.mjs`. The first source in `IMAGE_BASES` is the Companion host at `idlearc-companion-web-production.up.railway.app/static/images/items/`.
+Guide Helper includes all 202 item icons and their `index.json` mapping in `assets/items/`. The download command is `node scripts/fetch-art.mjs`. The first source in `IMAGE_BASES` is the Companion host at `idlearc-companion-web-production.up.railway.app/static/images/items/`. For the browser and server download options, see the [item icon guide](assets/items/README.en.md).
 
 The original download report traced `fetch failed` to missing network access and `HTTP 403` to Cloudflare on `idlearc.com`. The project used the existing Companion source to retrieve the icons.
 
